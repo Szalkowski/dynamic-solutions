@@ -1,0 +1,21 @@
+@import './_mixins.scss';
+
+h1 {
+  @include pxToRem(font-size, 32);
+}
+
+h2 {
+  @include pxToRem(font-size, 24);
+}
+
+p {
+  @include pxToRem(font-size, 16);
+
+  .small {
+    @include pxToRem(font-size, 14);
+  }
+
+  &.highlight {
+    font-weight: 600;
+  }
+}
