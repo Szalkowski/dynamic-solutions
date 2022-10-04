@@ -1,0 +1,45 @@
+@import '../../../styles/_variables.scss';
+
+nav {
+  position: absolute;
+  top: 80px;
+  left: $padding;
+
+  a {
+    display: block;
+    line-height: 2;
+  }
+
+  .hamburger {
+    position: relative;
+    width: 25px;
+    height: 20px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+
+    span {
+      display: block;
+      height: 1px;
+      background: #ffffff;
+
+      &:before, &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        width: inherit;
+        height: inherit;
+        background: #ffffff;
+      }
+
+      &:before {
+        top: 0;
+      }
+
+      &:after {
+        bottom: 0;
+      }
+    }
+  }
+}

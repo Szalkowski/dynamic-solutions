@@ -1,7 +1,24 @@
 @import './_mixins.scss';
+@import './_colors.scss';
+
+h1, h2, p, span {
+  color: $textWhite;
+}
+
+a {
+  color: $primary;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover {
+    color: $secondary;
+    text-decoration: underline;
+  }
+}
 
 h1 {
-  @include pxToRem(font-size, 32);
+  color: #171616;
+  @include pxToRem(font-size, 20);
 }
 
 h2 {
@@ -11,8 +28,8 @@ h2 {
 p {
   @include pxToRem(font-size, 16);
 
-  .small {
-    @include pxToRem(font-size, 14);
+  &.small {
+    @include pxToRem(font-size, 12);
   }
 
   &.highlight {
