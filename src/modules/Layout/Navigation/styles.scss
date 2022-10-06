@@ -1,4 +1,5 @@
-@import '../../../styles/_variables.scss';
+@import '../../../styles/variables';
+@import '../../../styles/colors';
 
 nav {
   position: absolute;
@@ -31,6 +32,7 @@ nav {
         width: inherit;
         height: inherit;
         background: #ffffff;
+        transition: all 100ms;
       }
 
       &:before {
@@ -40,6 +42,42 @@ nav {
       &:after {
         bottom: 0;
       }
+    }
+
+    &.open {
+      span {
+        &:before {
+          width: 15px;
+          transform: rotate(-45deg) translate(-5px, 1px);
+        }
+
+        &:after {
+          width: 15px;
+          transform: rotate(45deg) translate(-5px, -1px);
+        }
+      }
+    }
+  }
+
+  .navigation {
+    opacity: 0;
+    padding: 5px;
+    margin-top: 10px;
+    border-radius: 3px;
+    background: $neutralLight;
+    transition: opacity 100ms;
+
+    a {
+      color: $background;
+      font-weight: 600;
+
+      &.active {
+        color: $primary;
+      }
+    }
+
+    &.open {
+      opacity: 1;
     }
   }
 }

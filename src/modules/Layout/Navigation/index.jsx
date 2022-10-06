@@ -1,7 +1,8 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
-import { elements } from './config'
+import { NavLink } from 'react-router-dom'
+import { routes } from '../../../core/routes'
 import './styles.scss'
+import classNames from 'classnames'
 
 export const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -10,15 +11,25 @@ export const Navigation = () => {
   }
   return (
     <nav>
-      <button className={'hamburger'} onClick={menuOpenHandler}>
+      <button
+        className={classNames('hamburger', {
+          open: isMenuOpen,
+        })}
+        onClick={menuOpenHandler}
+      >
         <span></span>
       </button>
-      {isMenuOpen &&
-        elements.map((element) => (
-          <Link to={element.href} target={element.target}>
-            {element.name}
-          </Link>
+      <div
+        className={classNames('navigation', {
+          open: isMenuOpen,
+        })}
+      >
+        {Object.keys(routes).map((route) => (
+          <NavLink key={routes[route].path} to={routes[route].path} end>
+            {routes[route].name}
+          </NavLink>
         ))}
+      </div>
     </nav>
   )
 }

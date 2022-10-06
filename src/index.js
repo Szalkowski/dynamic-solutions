@@ -4,8 +4,11 @@ import reportWebVitals from './core/reportWebVitals'
 import { Header } from './modules/Layout/Header'
 import { Footer } from './modules/Layout/Footer'
 import { Navigation } from './modules/Layout/Navigation'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { UserProfile } from './modules/UserProfile'
+import { UserInformation } from './modules/UserInformation'
 import './styles/_global.scss'
-import { BrowserRouter } from 'react-router-dom'
+import { routes } from './core/routes'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
@@ -13,6 +16,10 @@ root.render(
     <Header />
     <BrowserRouter>
       <Navigation />
+      <Routes>
+        <Route path={routes.main.path} element={<UserInformation />} />
+        <Route path={routes.userProfile.path} element={<UserProfile />} />
+      </Routes>
     </BrowserRouter>
     <Footer />
   </React.StrictMode>
