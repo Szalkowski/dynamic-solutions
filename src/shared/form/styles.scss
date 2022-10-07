@@ -1,0 +1,23 @@
+@import '../../styles/colors';
+@import '../../styles/mixins';
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  textarea {
+    height: 150px;
+    resize: none;
+  }
+
+  button[type='submit'] {
+    display: block;
+    align-self: flex-end;
+    padding: 10px;
+    margin-top: 15px;
+    @include pxToRem(font-size, 14);
+    font-weight: 600;
+    background: $primary;
+  }
+}

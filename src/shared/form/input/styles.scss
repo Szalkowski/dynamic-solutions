@@ -1,0 +1,39 @@
+@import '../../../styles/colors';
+
+.input {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 5px 0;
+  width: 100%;
+
+  input, textarea {
+    width: 100%;
+
+    margin-left: 5px;
+    color: #ffffff;
+    outline: none;
+    box-shadow: none;
+    border: 1px solid $neutralLight;
+    background: transparent;
+  }
+
+  input:not([type='file']) {
+    padding: 0 8px;
+    height: 32px;
+  }
+
+  label {
+    width: 40%;
+    text-align: right;
+  }
+
+  .react-datepicker-wrapper {
+    margin-left: 5px;
+
+    input {
+      margin-left: 0;
+    }
+  }
+
+}

@@ -1,3 +1,5 @@
+import './styles.scss'
+
 export const Form = (props) => {
   const { children, onSubmit, buttonClassName, submitButtonText } = props
   return (

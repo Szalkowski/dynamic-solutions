@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
-import { routes } from '../../../core/routes'
+import { routes } from '../../routes'
 import './styles.scss'
 import classNames from 'classnames'
 
