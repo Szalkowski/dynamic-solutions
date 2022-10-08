@@ -9,8 +9,8 @@ export const TextField = (props) => {
   return (
     <div className={'input'}>
       <label htmlFor={name}>{label}</label>
-      <input {...register(name, options)} />
-      {errors.name && <span>{errorText}</span>}
+      <input {...register(name, { ...options })} />
+      {errors[name] && <span>{errorText}</span>}
     </div>
   )
 }

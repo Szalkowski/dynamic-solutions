@@ -1,4 +1,5 @@
 import { useForm } from 'react-hook-form'
+import './styles.scss'
 
 export const Textarea = (props) => {
   const { name, options, label, errorText } = props

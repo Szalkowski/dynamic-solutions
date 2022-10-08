@@ -1,0 +1,23 @@
+@import '../../../../styles/colors';
+@import '../../../../styles/mixins';
+
+.input {
+  .react-datepicker {
+    &-wrapper {
+      margin-left: 5px;
+
+      input {
+        margin-left: 0;
+      }
+    }
+
+    &__close-icon {
+      &:after {
+        color: $background;
+        @include pxToRem(font-size, 16);
+        font-weight: 600;
+        background-color: $primary;
+      }
+    }
+  }
+}
