@@ -8,7 +8,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { UserProfile } from './modules/UserProfile'
 import { UserInformation } from './modules/UserInformation'
 import './styles/_global.scss'
-import { routes } from './core/routes'
+import { routes } from './core/Routes/routes'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(

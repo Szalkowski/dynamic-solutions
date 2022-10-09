@@ -1,4 +1,3 @@
-import { useForm } from 'react-hook-form'
 import { Form } from '../../shared/form'
 import { userForm } from '../../shared/form/userForm'
 import {
@@ -11,16 +10,11 @@ import {
 } from '../../shared/form/input'
 
 export const UserInformation = () => {
-  const { register, handleSubmit } = useForm()
-
   const submitFormHandler = (data) => {
     console.log(data)
   }
   return (
-    <Form
-      onSubmit={handleSubmit(submitFormHandler)}
-      submitButtonText={'Submit Form'}
-    >
+    <Form onSubmit={submitFormHandler} submitButtonText={'Submit Form'}>
       <TextField
         name={userForm.firstName.id}
         options={userForm.firstName.options}

@@ -1,20 +1,23 @@
-import { useForm } from 'react-hook-form'
+import { useFormContext } from 'react-hook-form'
 
 export const FileUploadField = (props) => {
   const { name, options, label, errorText, acceptedFiles } = props
   const {
     register,
     formState: { errors },
-  } = useForm()
+  } = useFormContext()
   return (
     <div className={'input'}>
       <label htmlFor={name}>{label}</label>
-      <input
-        type={'file'}
-        {...register(name, options)}
-        accept={acceptedFiles}
-      />
-      {errors.name && <span>{errorText}</span>}
+      <div>
+        <input
+          type={'file'}
+          {...register(name, options)}
+          accept={acceptedFiles}
+        />
+
+        {errors[name] && <span>{errorText}</span>}
+      </div>
     </div>
   )
 }
