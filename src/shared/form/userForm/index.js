@@ -2,19 +2,19 @@ import { formLabels } from '../labels'
 
 export const userForm = {
   firstName: {
-    id: 'first-name-input',
+    id: 'firstName',
     label: 'First Name:',
     options: { required: true },
     errorMessage: formLabels.required,
   },
   lastName: {
-    id: 'last-name-input',
+    id: 'lastName',
     label: 'Last Name:',
     options: { required: true },
     errorMessage: formLabels.required,
   },
   email: {
-    id: 'email-input',
+    id: 'email',
     label: 'Email:',
     options: {
       required: true,
@@ -23,21 +23,27 @@ export const userForm = {
     errorMessage: formLabels.incorrectEmail,
   },
   phone: {
-    id: 'phone-number-input',
+    id: 'phone',
     label: 'Phone:',
     options: { pattern: /^(\+|00)[0-9]{1,3}\s[0-9]{9}$/ },
     errorMessage: formLabels.incorrectPhone,
   },
   birthday: {
-    id: 'birthday-input',
+    id: 'birthday',
     label: 'Birthday:',
+    options: { required: true },
+    errorMessage: formLabels.required,
   },
   about: {
-    id: 'about-input',
+    id: 'about',
     label: 'About:',
+    options: { required: true },
+    errorMessage: formLabels.required,
   },
   avatar: {
-    id: 'avatar-input',
+    id: 'avatar',
     label: 'Avatar:',
+    options: { required: true },
+    errorMessage: formLabels.required,
   },
 }

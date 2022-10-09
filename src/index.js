@@ -1,28 +1,32 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+import { Provider } from 'react-redux'
 import reportWebVitals from './core/reportWebVitals'
+import { routes } from './core/Routes/routes'
 import { Header } from './core/Layout/Header'
 import { Footer } from './core/Layout/Footer'
 import { Navigation } from './core/Layout/Navigation'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { UserProfile } from './modules/UserProfile'
 import { UserInformation } from './modules/UserInformation'
+import store from './core/redux/store'
 import './styles/_global.scss'
-import { routes } from './core/Routes/routes'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
-  <React.StrictMode>
+  <Provider store={store}>
     <Header />
     <BrowserRouter>
       <Navigation />
-      <Routes>
-        <Route path={routes.main.path} element={<UserInformation />} />
-        <Route path={routes.userProfile.path} element={<UserProfile />} />
-      </Routes>
+      <div className={'content'}>
+        <Routes>
+          <Route path={routes.main.path} element={<UserInformation />} />
+          <Route path={routes.userProfile.path} element={<UserProfile />} />
+        </Routes>
+      </div>
     </BrowserRouter>
     <Footer />
-  </React.StrictMode>
+  </Provider>
 )
 
 // If you want to start measuring performance in your app, pass a function

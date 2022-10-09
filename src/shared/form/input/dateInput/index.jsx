@@ -9,6 +9,7 @@ export const DateInput = (props) => {
     control,
     formState: { errors },
   } = useFormContext()
+
   return (
     <div className={'input'}>
       <label htmlFor={name}>{label}</label>

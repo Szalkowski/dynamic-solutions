@@ -1,5 +1,6 @@
 import { Form } from '../../shared/form'
 import { userForm } from '../../shared/form/userForm'
+import { useDispatch } from 'react-redux'
 import {
   DateInput,
   EmailInput,
@@ -8,11 +9,30 @@ import {
   Textarea,
   TextField,
 } from '../../shared/form/input'
+import { submitForm } from './reducer'
+import moment from 'moment'
+import { useNavigate } from 'react-router-dom'
 
 export const UserInformation = () => {
+  const dispatch = useDispatch()
+  const navigate = useNavigate()
   const submitFormHandler = (data) => {
-    console.log(data)
+    const serializedForm = {}
+    Object.keys(data).forEach((field) => {
+      serializedForm[field] = data[field]
+      if (userForm.birthday.id in serializedForm) {
+        serializedForm[userForm.birthday.id] = moment(
+          data[userForm.birthday.id]
+        ).format('DD-MM-yyyy')
+      }
+      if (userForm.avatar.id in serializedForm) {
+        serializedForm[userForm.avatar.id] = data.avatar[0].name
+      }
+    })
+    dispatch(submitForm(serializedForm))
+    navigate('/user-profile')
   }
+
   return (
     <Form onSubmit={submitFormHandler} submitButtonText={'Submit Form'}>
       <TextField

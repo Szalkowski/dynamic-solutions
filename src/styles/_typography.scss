@@ -22,6 +22,7 @@ h2 {
 
 p {
   @include pxToRem(font-size, 16);
+  line-height: 2;
 
   &.small {
     @include pxToRem(font-size, 12);

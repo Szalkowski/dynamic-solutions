@@ -3,26 +3,28 @@
 @import './variables';
 
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
 html {
-  height: 100%;
 
   body {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    margin: 0;
 
     #root {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      padding: $padding;
-      height: 100%;
+      position: relative;
+      padding: $padding $padding 40px;
+      min-height: 100vh;
       font-family: sans-serif;
       background-color: $background;
+
+      .content {
+        width: 100%;
+      }
     }
   }
 }
