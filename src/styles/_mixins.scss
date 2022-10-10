@@ -1,3 +1,27 @@
 @mixin pxToRem($property, $pxValue) {
   #{$property}: calc($pxValue / 16) + rem;
 }
+
+@mixin tablet {
+  @media (min-width: 768px) {
+    @content
+  }
+}
+
+@mixin smallLaptop {
+  @media (min-width: 1366px) {
+    @content
+  }
+}
+
+@mixin laptop {
+  @media(min-width: 1920px) {
+    @content
+  }
+}
+
+@mixin largeScreen {
+  @media(min-width: 2560px) {
+    @content
+  }
+}

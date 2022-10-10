@@ -1,13 +1,26 @@
 @import '../../../styles/colors';
+@import '../../../styles/mixins';
 
 header {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
   padding: 5px;
   width: 100%;
   height: 50px;
   border-radius: 3px;
   background-color: $neutralDark;
   box-shadow: 0 0 5px $neutralDark;
+
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+  }
+}
+
+@include smallLaptop {
+  header {
+    div {
+      margin: 0 auto;
+    }
+  }
 }

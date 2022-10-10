@@ -26,7 +26,7 @@ export const UserInformation = () => {
         ).format('DD-MM-yyyy')
       }
       if (userForm.avatar.id in serializedForm) {
-        serializedForm[userForm.avatar.id] = data.avatar[0].name
+        serializedForm[userForm.avatar.id] = data.avatar[0]?.name
       }
     })
     dispatch(submitForm(serializedForm))
@@ -62,12 +62,22 @@ export const UserInformation = () => {
       <DateInput
         name={userForm.birthday.id}
         label={userForm.birthday.label}
+        options={userForm.birthday.options}
+        errorText={userForm.birthday.errorMessage}
+        maxDate={moment(new Date()).toDate()}
         isClearable
       />
-      <Textarea name={userForm.about.id} label={userForm.about.label} />
+      <Textarea
+        name={userForm.about.id}
+        label={userForm.about.label}
+        options={userForm.about.options}
+        errorText={userForm.about.errorMessage}
+      />
       <FileUploadField
         name={userForm.avatar.id}
         label={userForm.avatar.label}
+        options={userForm.avatar.options}
+        errorText={userForm.avatar.errorMessage}
       />
     </Form>
   )

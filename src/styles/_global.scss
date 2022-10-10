@@ -28,3 +28,15 @@ html {
     }
   }
 }
+
+@include smallLaptop {
+  html {
+    body {
+      #root {
+        .content {
+          width: 830px;
+        }
+      }
+    }
+  }
+}

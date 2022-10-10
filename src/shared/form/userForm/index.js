@@ -25,7 +25,10 @@ export const userForm = {
   phone: {
     id: 'phone',
     label: 'Phone:',
-    options: { pattern: /^(\+|00)[0-9]{1,3}\s[0-9]{9}$/ },
+    options: {
+      required: true,
+      pattern: /^(\+|00)[0-9]{1,3}\s[0-9]{9}$/,
+    },
     errorMessage: formLabels.incorrectPhone,
   },
   birthday: {

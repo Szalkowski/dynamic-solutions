@@ -1,5 +1,6 @@
 @import '../../../styles/variables';
 @import '../../../styles/colors';
+@import '../../../styles/mixins';
 
 nav {
   position: absolute;
@@ -22,7 +23,7 @@ nav {
     span {
       display: block;
       height: 1px;
-      background: #ffffff;
+      background: $textWhite;
 
       &:before, &:after {
         content: '';
@@ -31,7 +32,7 @@ nav {
         right: 0;
         width: inherit;
         height: inherit;
-        background: #ffffff;
+        background: $textWhite;
         transition: all 100ms;
       }
 
@@ -80,6 +81,49 @@ nav {
     &.open {
       display: block;
       opacity: 1;
+    }
+  }
+}
+
+@include tablet {
+  nav {
+    top: 65px;
+    right: 15px;
+
+    .navigation {
+      display: flex;
+      justify-content: center;
+      opacity: 1;
+      margin-top: 5px;
+      background-color: $neutralLight;
+
+      div {
+        display: flex;
+        justify-content: space-around;
+        flex: 1;
+      }
+
+      a {
+        &.active {
+          color: $primaryDark;
+        }
+
+        &:focus, &:active {
+          background: transparent;
+        }
+      }
+    }
+  }
+}
+
+@include smallLaptop {
+  nav {
+    .navigation {
+
+      div {
+        justify-content: space-between;
+        flex: unset;
+      }
     }
   }
 }

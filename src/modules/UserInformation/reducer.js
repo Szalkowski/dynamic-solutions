@@ -3,7 +3,7 @@ import { createSlice } from '@reduxjs/toolkit'
 export const submittedForm = createSlice({
   name: 'userForm',
   initialState: {
-    value: {},
+    value: null,
   },
   reducers: {
     submitForm: (state, action) => {

@@ -1,70 +1,27 @@
-# Getting Started with Create React App
+In this test task I had to create a simple website with two subpages. One of them is with form for fill details about
+user second one is for display those details.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+To make this task I've decided to use React. It's simple javascript library to use with full of packages those could be
+installed when needed. One of them is for validate forms which save time of developing app. This package
+add errors when they appear checks fields for us handle submit form, checks which field was edited. Of course I could
+create
+validation by myself like long time ago just by simple javascript and check required or patterns of fields. Second
+package that replaced browser's sessionstorage is Redux. It's make app faster and extend its possibility for API
+requests. Holds app state separately and developers friendly.
 
-## Available Scripts
+React let us build websites with routing so no need to reload page after it's change so users are more happy because of
+it's performance.
 
-In the project directory, you can run:
+I've created styles using SASS preprocessor. It's pure CSS but better and like for me is more readable and reusable than
+styled-components. In easy
+way let us provide simple reusable functions ie. for responsive styles or converting pixels to rem. Also nesting is
+easier
+than in styled-components. In the past BEM was also great invention and can still be used successfully in SASS way.
 
-### `npm start`
+More than that React is installed with configured Webpack what is the best solution now. No need to configure everything
+from hand and write scripts like in Grunt or Gulp.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+I think I have crated readable, modern but in old school app, which is easy to compile, deploy, and further development
+and maintenance.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Link to website: https://test-webs.batinweb.com

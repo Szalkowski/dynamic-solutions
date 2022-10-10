@@ -4,7 +4,14 @@ import 'react-datepicker/dist/react-datepicker.css'
 import './styles.scss'
 
 export const DateInput = (props) => {
-  const { name, options, label, errorText, isClearable = false } = props
+  const {
+    name,
+    options,
+    label,
+    errorText,
+    isClearable = false,
+    maxDate,
+  } = props
   const {
     control,
     formState: { errors },
@@ -23,6 +30,7 @@ export const DateInput = (props) => {
               onChange={onChange}
               dateFormat={'dd-MM-yyyy'}
               isClearable={isClearable}
+              maxDate={maxDate}
             />
           )}
           rules={options}

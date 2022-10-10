@@ -12,7 +12,6 @@ export const Textarea = (props) => {
       <label htmlFor={name}>{label}</label>
       <div>
         <textarea {...register(name, options)} />
-
         {errors[name] && <span>{errorText}</span>}
       </div>
     </div>

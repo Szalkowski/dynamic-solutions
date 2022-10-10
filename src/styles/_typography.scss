@@ -1,5 +1,5 @@
-@import './_mixins.scss';
-@import './_colors.scss';
+@import './mixins';
+@import './colors';
 
 h1, h2, p, span, label {
   color: $textWhite;
@@ -30,5 +30,14 @@ p {
 
   &.highlight {
     font-weight: 600;
+  }
+}
+
+@include smallLaptop {
+  a {
+    &:hover {
+      color: $secondary;
+      text-decoration: underline;
+    }
   }
 }

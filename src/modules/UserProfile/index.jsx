@@ -5,7 +5,10 @@ import './styles.scss'
 
 export const UserProfile = () => {
   const formFields = useSelector((state) => state.submittedForm.value)
-  return (
+  console.log(formFields)
+  return !formFields ? (
+    <h2>Please fill form first!!!</h2>
+  ) : (
     <div className={'user-profile'}>
       <Image
         className={'avatar'}
