@@ -77,6 +77,8 @@ export const UserInformation = () => {
         name={userForm.avatar.id}
         label={userForm.avatar.label}
         options={userForm.avatar.options}
+        acceptedFiles={'image/*'}
+        maxSize={2000000}
         errorText={userForm.avatar.errorMessage}
       />
     </Form>
